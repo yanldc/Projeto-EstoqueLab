@@ -1,0 +1,95 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 2px 2px 6px #bebebe,
+        -2px -2px 6px #ffffff;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.list-table th,
+.list-table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+}
+
+.list-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.list-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.menu-list{
+    margin-top: 20px;
+    display: flex;
+}
+
+.button-style{
+    background-color: #fff;
+    border: 1px solid #006400;
+    padding: 3px;
+    position: relative;
+    width: 6.2em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 12px;
+    border-radius: 0.4em;
+    margin: 3px;
+}
+.button-style p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+}
+
+.button-style svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+}
+
+.button-style:hover p {
+    left: 0.5em;
+    color: #fff
+}
+
+.button-style:hover svg {
+    opacity: 1;
+}
+
+.button-style:hover {
+    background-color: #25D366;
+}
+

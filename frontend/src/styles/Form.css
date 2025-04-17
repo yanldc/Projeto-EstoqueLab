@@ -1,0 +1,103 @@
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 2px 2px 6px #bebebe,
+                -2px -2px 6px #ffffff;
+}
+
+.form-container-spec {
+    display: flex;
+    padding-left: 35vh;
+}
+
+.form-container-spec2 {
+    display: flex;
+    padding-left: 10vh;
+}
+
+.title{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+        background: #e0e0e0;
+        box-shadow: 2px 2px 6px #bebebe,
+            -2px -2px 6px #ffffff;
+}
+
+.form-create {
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+}
+
+input{
+    background-color: #fff;
+    border: 1px solid #006400;
+    padding: 3px;
+    width: 12em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 12px;
+    border-radius: 0.4em;
+    margin: 3px;
+    text-align: center;
+}
+
+.button-style {
+    background-color: #fff;
+    border: 1px solid #006400;
+    padding: 3px;
+    position: relative;
+    width: 6.2em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 12px;
+    border-radius: 0.4em;
+    margin: 3px;
+}
+
+.button-style p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+}
+
+.button-style svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+}
+
+.button-style:hover p {
+    left: 0.5em;
+    color: #fff
+}
+
+.button-style:hover svg {
+    opacity: 1;
+}
+
+.button-style:hover {
+    background-color: #25D366;
+}
