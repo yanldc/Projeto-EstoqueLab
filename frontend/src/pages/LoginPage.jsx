@@ -13,7 +13,6 @@ function LoginPage() {
   const [showCookiePopup, setShowCookiePopup] = useState(true);
   const navigate = useNavigate();
 
-  // Load saved credentials from cookies if they exist and check cookie consent
   useEffect(() => {
     const cookieConsent = localStorage.getItem('cookieConsent');
     
@@ -40,20 +39,16 @@ function LoginPage() {
       const response = await axios.post('http://localhost:3001/auth', { email, password });
       const { token } = response.data;
       localStorage.setItem('token', token);
-      
-      // Save credentials in cookies if "Remember Me" is checked and consent was given
+     
       if (rememberMe && localStorage.getItem('cookieConsent') === 'accepted') {
-        // Set cookies to expire in 7 days
         Cookies.set('userEmail', email, { expires: 7 });
         Cookies.set('userPassword', password, { expires: 7 });
         setCookieMessage('Suas credenciais foram salvas para facilitar futuros logins');
       } else if (!localStorage.getItem('cookieConsent') === 'accepted') {
-        // Remove any existing cookies if consent was not given
         Cookies.remove('userEmail');
         Cookies.remove('userPassword');
       }
-      
-      // Navigate after a short delay to show the cookie message
+
       setTimeout(() => {
         navigate('/home');
       }, 1500);
@@ -67,7 +62,7 @@ function LoginPage() {
       localStorage.setItem('cookieConsent', 'accepted');
     } else {
       localStorage.setItem('cookieConsent', 'rejected');
-      // Remove any existing cookies
+      
       Cookies.remove('userEmail');
       Cookies.remove('userPassword');
     }
